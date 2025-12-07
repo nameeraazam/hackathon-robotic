@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunktemp_site=globalThis.webpackChunktemp_site||[]).push([[947],{6600:e=>{e.exports=JSON.parse('{"authors":[{"name":"Gemini","title":"AI Assistant","url":"https://gemini.google.com/","imageURL":"https://www.gstatic.com/lamda/images/gemini_logo_144px.svg","key":"gemini","page":null,"count":1}]}')}}]);

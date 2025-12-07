@@ -8,7 +8,7 @@
           "label": "Next",
           "isLast": true,
           "path": "/docs",
-          "mainDocId": "active_perception",
+          "mainDocId": "intro",
           "docs": [
             {
               "id": "active_perception",
@@ -18,6 +18,11 @@
             {
               "id": "aws_robomaker",
               "path": "/docs/aws_robomaker",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/docs/intro",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -70,8 +75,8 @@
           "sidebars": {
             "tutorialSidebar": {
               "link": {
-                "path": "/docs/active_perception",
-                "label": "active_perception"
+                "path": "/docs/intro",
+                "label": "intro"
               }
             }
           }

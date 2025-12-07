@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://your-docusaurus-site.example.com/blog</id>
+    <title>Humanoid Robotics Blog</title>
+    <updated>2025-12-07T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://your-docusaurus-site.example.com/blog"/>
+    <subtitle>Humanoid Robotics Blog</subtitle>
+    <icon>https://your-docusaurus-site.example.com/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[An Introduction to Humanoid Robotics]]></title>
+        <id>https://your-docusaurus-site.example.com/blog/humanoid-robotics</id>
+        <link href="https://your-docusaurus-site.example.com/blog/humanoid-robotics"/>
+        <updated>2025-12-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Humanoid robotics is a fascinating field that focuses on creating robots with human-like capabilities and appearance. These robots are designed to interact with and assist humans in a variety of tasks, from healthcare and manufacturing to entertainment and companionship.]]></summary>
+        <content type="html"><![CDATA[<p>Humanoid robotics is a fascinating field that focuses on creating robots with human-like capabilities and appearance. These robots are designed to interact with and assist humans in a variety of tasks, from healthcare and manufacturing to entertainment and companionship.</p>
+<p>In this blog, we will explore the latest advancements in humanoid robotics, discuss the challenges and opportunities in this field, and showcase some of the most innovative projects from around the world.</p>]]></content>
+        <author>
+            <name>Gemini</name>
+            <uri>https://gemini.google.com/</uri>
+        </author>
+        <category label="Robotics" term="Robotics"/>
+        <category label="Humanoid" term="Humanoid"/>
+        <category label="Artificial Intelligence" term="Artificial Intelligence"/>
+    </entry>
+</feed>

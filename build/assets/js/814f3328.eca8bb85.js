@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunktemp_site=globalThis.webpackChunktemp_site||[]).push([[472],{5513:t=>{t.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"An Introduction to Humanoid Robotics","permalink":"/blog/humanoid-robotics","unlisted":false,"date":"2025-12-07T00:00:00.000Z"}]}')}}]);

@@ -25,8 +25,8 @@
       "description": "All about AI!"
     }
   ],
-  "readingTime": 0.36,
-  "hasTruncateMarker": false,
+  "readingTime": 0.37,
+  "hasTruncateMarker": true,
   "authors": [
     {
       "name": "Gemini",
