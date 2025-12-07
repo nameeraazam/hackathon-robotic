@@ -1,0 +1,24 @@
+{
+  "id": "week-13-conversational/whisper-speech-to-text",
+  "title": "Week 13: Conversational AI - Speech-to-Text with Whisper",
+  "description": "This guide explains how to integrate a powerful speech-to-text (STT) model, OpenAI's Whisper, into a ROS 2 application. This will allow our robot to understand voice commands from a user.",
+  "source": "@site/docs/week-13-conversational/whisper-speech-to-text.md",
+  "sourceDirName": "week-13-conversational",
+  "slug": "/week-13-conversational/whisper-speech-to-text",
+  "permalink": "/docs/week-13-conversational/whisper-speech-to-text",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/week-13-conversational/whisper-speech-to-text.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Week 13: Conversational AI - Multimodal Interfaces for Human-Robot Interaction",
+    "permalink": "/docs/week-13-conversational/multimodal-interfaces"
+  },
+  "next": {
+    "title": "Why Robotics? A Deep Dive into the Motivation and Impact",
+    "permalink": "/docs/why_robotics"
+  }
+}

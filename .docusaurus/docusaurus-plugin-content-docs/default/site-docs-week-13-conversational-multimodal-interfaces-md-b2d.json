@@ -1,0 +1,24 @@
+{
+  "id": "week-13-conversational/multimodal-interfaces",
+  "title": "Week 13: Conversational AI - Multimodal Interfaces for Human-Robot Interaction",
+  "description": "This document explores the concept of multimodal interfaces in the context of human-robot interaction, combining speech with other modalities like vision, gestures, and haptics to create more natural and intuitive communication channels.",
+  "source": "@site/docs/week-13-conversational/multimodal-interfaces.md",
+  "sourceDirName": "week-13-conversational",
+  "slug": "/week-13-conversational/multimodal-interfaces",
+  "permalink": "/docs/week-13-conversational/multimodal-interfaces",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/week-13-conversational/multimodal-interfaces.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Weeks 11-12: Capstone Project - Humanoid Butler Bot",
+    "permalink": "/docs/week-11-12-humanoid/project"
+  },
+  "next": {
+    "title": "Week 13: Conversational AI - Speech-to-Text with Whisper",
+    "permalink": "/docs/week-13-conversational/whisper-speech-to-text"
+  }
+}

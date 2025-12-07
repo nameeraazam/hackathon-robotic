@@ -1,0 +1,83 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "active_perception",
+          "docs": [
+            {
+              "id": "active_perception",
+              "path": "/docs/active_perception",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "aws_robomaker",
+              "path": "/docs/aws_robomaker",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "physical-ai-and-humanoids",
+              "path": "/docs/physical-ai-and-humanoids",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "vision_language_models",
+              "path": "/docs/vision_language_models",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "week-01-02-physical-ai/assessment",
+              "path": "/docs/week-01-02-physical-ai/assessment",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "week-03-05-ros2/urdf-robot-description",
+              "path": "/docs/week-03-05-ros2/urdf-robot-description",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "week-08-10-isaac/sim-to-real",
+              "path": "/docs/week-08-10-isaac/sim-to-real",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "week-11-12-humanoid/project",
+              "path": "/docs/week-11-12-humanoid/project",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "week-13-conversational/multimodal-interfaces",
+              "path": "/docs/week-13-conversational/multimodal-interfaces",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "week-13-conversational/whisper-speech-to-text",
+              "path": "/docs/week-13-conversational/whisper-speech-to-text",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "why_robotics",
+              "path": "/docs/why_robotics",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/docs/active_perception",
+                "label": "active_perception"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

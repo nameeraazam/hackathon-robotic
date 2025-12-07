@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+openai
+qdrant-client
+python-dotenv
+pypdf
+beautifulsoup4
+tiktoken
+streamlit

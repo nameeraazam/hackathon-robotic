@@ -1,0 +1,24 @@
+{
+  "id": "physical-ai-and-humanoids",
+  "title": "Comprehensive Overview of Physical AI & Humanoid Robotics",
+  "description": "This document provides a comprehensive overview of the field of Physical AI and Humanoid Robotics, covering its history, key components, state-of-the-art advancements, and future outlook.",
+  "source": "@site/docs/physical-ai-and-humanoids.md",
+  "sourceDirName": ".",
+  "slug": "/physical-ai-and-humanoids",
+  "permalink": "/docs/physical-ai-and-humanoids",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/physical-ai-and-humanoids.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "AWS RoboMaker: Cloud-Based Robotics Development and Deployment",
+    "permalink": "/docs/aws_robomaker"
+  },
+  "next": {
+    "title": "Vision-Language Models (VLMs): Bridging the Digital Brain with the Physical World",
+    "permalink": "/docs/vision_language_models"
+  }
+}

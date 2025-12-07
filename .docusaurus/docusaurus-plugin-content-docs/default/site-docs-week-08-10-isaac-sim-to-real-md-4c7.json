@@ -1,0 +1,24 @@
+{
+  "id": "week-08-10-isaac/sim-to-real",
+  "title": "Weeks 8-10: Advanced Simulation with Isaac Sim & the Sim-to-Real Challenge",
+  "description": "This document introduces NVIDIA's Isaac Sim and explores the critical robotics concept of \"Sim-to-Real.\" We'll discuss why it's a major challenge and the strategies used to overcome it, particularly with advanced simulators like Isaac Sim.",
+  "source": "@site/docs/week-08-10-isaac/sim-to-real.md",
+  "sourceDirName": "week-08-10-isaac",
+  "slug": "/week-08-10-isaac/sim-to-real",
+  "permalink": "/docs/week-08-10-isaac/sim-to-real",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/week-08-10-isaac/sim-to-real.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Weeks 3-5: ROS 2 Fundamentals - Creating a URDF Robot Description",
+    "permalink": "/docs/week-03-05-ros2/urdf-robot-description"
+  },
+  "next": {
+    "title": "Weeks 11-12: Capstone Project - Humanoid Butler Bot",
+    "permalink": "/docs/week-11-12-humanoid/project"
+  }
+}

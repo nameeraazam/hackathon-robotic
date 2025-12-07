@@ -1,0 +1,20 @@
+{
+  "id": "active_perception",
+  "title": "Active Perception in Robotics",
+  "description": "This document defines active perception, contrasts it with traditional passive perception, highlights its advantages in various robotics applications, and provides concrete examples of its implementation.",
+  "source": "@site/docs/active_perception.md",
+  "sourceDirName": ".",
+  "slug": "/active_perception",
+  "permalink": "/docs/active_perception",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/active_perception.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "AWS RoboMaker: Cloud-Based Robotics Development and Deployment",
+    "permalink": "/docs/aws_robomaker"
+  }
+}

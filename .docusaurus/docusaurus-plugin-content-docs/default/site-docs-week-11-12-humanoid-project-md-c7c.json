@@ -1,0 +1,24 @@
+{
+  "id": "week-11-12-humanoid/project",
+  "title": "Weeks 11-12: Capstone Project - Humanoid Butler Bot",
+  "description": "This document outlines the capstone project for the humanoid development course. The goal is to integrate all the concepts learned in the previous weeks—from robot description and control to simulation and AI—to build a simulated \"Butler Bot.\" This robot will be capable of navigating a home environment, perceiving objects, and performing a simple fetch-and-carry task.",
+  "source": "@site/docs/week-11-12-humanoid/project.md",
+  "sourceDirName": "week-11-12-humanoid",
+  "slug": "/week-11-12-humanoid/project",
+  "permalink": "/docs/week-11-12-humanoid/project",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/week-11-12-humanoid/project.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Weeks 8-10: Advanced Simulation with Isaac Sim & the Sim-to-Real Challenge",
+    "permalink": "/docs/week-08-10-isaac/sim-to-real"
+  },
+  "next": {
+    "title": "Week 13: Conversational AI - Multimodal Interfaces for Human-Robot Interaction",
+    "permalink": "/docs/week-13-conversational/multimodal-interfaces"
+  }
+}

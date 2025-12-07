@@ -1,0 +1,20 @@
+{
+  "id": "why_robotics",
+  "title": "Why Robotics? A Deep Dive into the Motivation and Impact",
+  "description": "This document explores the fundamental reasons driving the relentless pursuit of advancements in robotics. From societal benefits to economic transformation and scientific exploration, robotics stands as a pivotal field shaping the future.",
+  "source": "@site/docs/why_robotics.md",
+  "sourceDirName": ".",
+  "slug": "/why_robotics",
+  "permalink": "/docs/why_robotics",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/why_robotics.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Week 13: Conversational AI - Speech-to-Text with Whisper",
+    "permalink": "/docs/week-13-conversational/whisper-speech-to-text"
+  }
+}

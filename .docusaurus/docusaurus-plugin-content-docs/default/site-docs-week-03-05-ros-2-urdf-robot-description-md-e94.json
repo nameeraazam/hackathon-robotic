@@ -1,0 +1,24 @@
+{
+  "id": "week-03-05-ros2/urdf-robot-description",
+  "title": "Weeks 3-5: ROS 2 Fundamentals - Creating a URDF Robot Description",
+  "description": "This document provides a comprehensive, in-depth guide to creating a Unified Robot Description Format (URDF) file from scratch. URDF is an essential XML format used in ROS 2 to describe all elements of a robot model. By the end of this tutorial, you will have a complete URDF for a simple wheeled robot and a deep understanding of each component.",
+  "source": "@site/docs/week-03-05-ros2/urdf-robot-description.md",
+  "sourceDirName": "week-03-05-ros2",
+  "slug": "/week-03-05-ros2/urdf-robot-description",
+  "permalink": "/docs/week-03-05-ros2/urdf-robot-description",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/week-03-05-ros2/urdf-robot-description.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Week 1-2 Assessment: Physical AI and Humanoid Fundamentals",
+    "permalink": "/docs/week-01-02-physical-ai/assessment"
+  },
+  "next": {
+    "title": "Weeks 8-10: Advanced Simulation with Isaac Sim & the Sim-to-Real Challenge",
+    "permalink": "/docs/week-08-10-isaac/sim-to-real"
+  }
+}

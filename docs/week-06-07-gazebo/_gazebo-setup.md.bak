@@ -1,0 +1,174 @@
+# Weeks 6-7: Simulation with Gazebo - Setup and Integration
+
+This guide covers the setup of Gazebo for robotics simulation and its integration with ROS 2. Gazebo is a powerful 3D physics simulator that allows you to design, test, and iterate on your robot algorithms in a realistic virtual environment before deploying them on physical hardware.
+
+## 1. What is Gazebo?
+
+Gazebo is an open-source 3D robotics simulator. It provides:
+- **Physics Engine:** Simulates realistic physics, including gravity, friction, and collisions using engines like ODE, Bullet, or DART.
+- **3D Graphics:** Renders a high-quality 3D environment with lighting, shadows, and textures.
+- **Sensor Simulation:** Can simulate a wide variety of sensors, including cameras, LIDAR, IMUs, and GPS.
+- **ROS Integration:** Seamlessly integrates with ROS 2, allowing your ROS nodes to control the simulated robot and receive sensor data from it.
+
+As of recent ROS 2 distributions, the official simulator is now known as **Ignition Gazebo**, which is a significant architectural redesign of the original Gazebo (now often called "Gazebo Classic"). This guide will focus on the modern **Ignition Gazebo**.
+
+## 2. Installation
+
+Gazebo is best installed alongside a ROS 2 distribution (like Humble or Iron). The `ros-dev-tools` package typically includes Gazebo.
+
+### Step 2.1: Install ROS 2
+If you haven't already, install a full ROS 2 desktop version. For example, on Ubuntu 22.04:
+
+```bash
+# Follow the official ROS 2 Humble installation guide
+# Make sure to choose the "Desktop Install" which includes Gazebo and RViz
+sudo apt update
+sudo apt install ros-humble-desktop
+```
+
+### Step 2.2: Install Gazebo ROS 2 Packages
+
+The key package that connects ROS 2 to Gazebo is `ros-<distro>-gazebo-ros-pkgs`.
+
+```bash
+# Replace 'humble' with your ROS 2 distribution
+sudo apt install ros-humble-gazebo-ros-pkgs
+```
+
+This metapackage will install everything needed for the ROS 2 <-> Gazebo bridge to function.
+
+### Step 2.3: Verify Installation
+
+Source your ROS 2 setup file and try running Gazebo.
+
+```bash
+source /opt/ros/humble/setup.bash
+ign gazebo
+```
+A new, empty Gazebo window should appear. You can add simple shapes from the top menu to verify that the simulator is running correctly.
+
+## 3. Gazebo and URDFs
+
+Gazebo can use the URDF file we created in the previous module. However, URDFs are primarily for kinematic description and lack tags for dynamics and simulation-specific properties. To enhance our robot model for Gazebo, we use the **SDF (Simulation Description Format)**.
+
+You have two main options:
+1.  **Convert URDF to SDF:** Gazebo performs this conversion internally.
+2.  **Add Gazebo-specific tags to the URDF:** You can embed SDF elements within a `<gazebo>` tag inside your URDF. This is the most common approach in the ROS ecosystem.
+
+### Enhancing a URDF for Gazebo
+
+Let's modify our `articubot.urdf` to include Gazebo plugins. These plugins allow ROS 2 to control the robot and get sensor data.
+
+A common and essential plugin is the **Differential Drive Controller**. This plugin takes `Twist` messages (linear and angular velocity) from a ROS 2 topic and uses them to control the wheel joints of our robot.
+
+Add the following snippet inside the `<robot>` tag of your `articubot.urdf` file:
+
+```text
+<!-- Gazebo Plugins -->
+<gazebo>
+    <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+        <robot_param>robot_description</robot_param>
+        <robot_param_node>robot_state_publisher</robot_param_node>
+        <parameters>$(find your_package_name)/config/my_controllers.yaml</parameters>
+    </plugin>
+</gazebo>
+
+<gazebo reference="laser_scanner_link">
+    <sensor type="gpu_ray" name="laser_sensor">
+        <update_rate>10</update_rate>
+        <visualize>true</visualize>
+        <ray>
+            <scan>
+                <horizontal>
+                    <samples>360</samples>
+                    <resolution>1</resolution>
+                    <min_angle>-3.14</min_angle>
+                    <max_angle>3.14</max_angle>
+                </horizontal>
+            </scan>
+            <range>
+                <min>0.1</min>
+                <max>12.0</max>
+                <resolution>0.01</resolution>
+            </range>
+        </ray>
+        <plugin name="gazebo_ros_ray_sensor" filename="libgazebo_ros_ray_sensor.so">
+            <ros>
+                <namespace>/demo</namespace>
+                <output_type>sensor_msgs/LaserScan</output_type>
+                <topic>laser_scan</topic>
+            </ros>
+        </plugin>
+    </sensor>
+</gazebo>
+```
+The first `<gazebo>` tag adds the `ros2_control` plugin, which is the standard way to control joints in ROS 2. It requires a separate YAML configuration file to set up the controllers (e.g., the differential drive controller).
+
+The second `<gazebo>` tag, with the `reference` attribute, attaches a simulated LIDAR sensor to the `laser_scanner_link`. This plugin will publish `sensor_msgs/LaserScan` messages on the `/demo/laser_scan` topic, which you can then use in your SLAM or navigation algorithms.
+
+## 4. Launching a Robot in Gazebo
+
+To run a simulation, you need a ROS 2 launch file. This file will:
+1.  Load your robot's URDF into the `robot_description` parameter.
+2.  Start the `robot_state_publisher` to publish the robot's `tf2` transforms.
+3.  Start Gazebo.
+4.  Spawn your robot model into the Gazebo world.
+
+Here is a basic example of a Python launch file:
+
+```python
+import os
+from ament_index_python.packages import get_package_share_directory
+from launch import LaunchDescription
+from launch.actions import IncludeLaunchDescription
+from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch_ros.actions import Node
+
+def generate_launch_description():
+
+    pkg_gazebo_ros = get_package_share_directory('gazebo_ros')
+    pkg_your_robot_description = get_package_share_directory('your_package_name')
+
+    # Start Gazebo server and client
+    gazebo = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(pkg_gazebo_ros, 'launch', 'gazebo.launch.py'),
+        )
+    )
+
+    # Load URDF
+    robot_description_path = os.path.join(pkg_your_robot_description, 'description', 'articubot.urdf')
+    with open(robot_description_path, 'r') as f:
+        robot_description = f.read()
+
+    # Robot State Publisher
+    robot_state_publisher = Node(
+        package='robot_state_publisher',
+        executable='robot_state_publisher',
+        name='robot_state_publisher',
+        output='screen',
+        parameters=[{'robot_description': robot_description, 'use_sim_time': True}]
+    )
+
+    # Spawn Robot
+    spawn_entity = Node(
+        package='gazebo_ros',
+        executable='spawn_entity.py',
+        arguments=['-topic', 'robot_description', '-entity', 'articubot'],
+        output='screen'
+    )
+
+    return LaunchDescription([
+        gazebo,
+        robot_state_publisher,
+        spawn_entity
+    ])
+```
+
+To run this, save it as `gazebo_launch.py` in your package's `launch` directory, and then execute:
+
+```bash
+ros2 launch your_package_name gazebo_launch.py
+```
+
+You should see Gazebo open, and after a few moments, your `articubot` model will appear in the simulated world. You can then use ROS 2 tools to send commands and receive sensor data from your simulated robot.

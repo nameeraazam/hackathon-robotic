@@ -1,0 +1,14 @@
+robotics:
+  label: Robotics
+  description: All about robotics!
+  permalink: /tags/robotics
+
+humanoid:
+  label: Humanoid
+  description: All about humanoid robots!
+  permalink: /tags/humanoid
+
+ai:
+  label: Artificial Intelligence
+  description: All about AI!
+  permalink: /tags/ai
